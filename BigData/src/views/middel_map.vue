@@ -2,7 +2,7 @@
  * @Author: Johannjensen johannajensen1@gmail.com
  * @Date: 2023-07-15 14:53:03
  * @LastEditors: Johannjensen johannajensen1@gmail.com
- * @LastEditTime: 2023-07-15 20:17:43
+ * @LastEditTime: 2023-07-15 22:23:43
  * @FilePath: \BigData\BigData\src\views\middel_map.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -149,6 +149,12 @@ const map = () => {
 </script>
 
 <template>
-  <div id="map" style="width: 100%;height: 100%;"></div>
+  <div id="map"></div>
 </template>
-<style scoped></style>
+<style scoped>
+#map{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+</style>

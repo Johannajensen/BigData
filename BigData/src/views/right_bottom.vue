@@ -1,3 +1,11 @@
+<!--
+ * @Author: Johannjensen johannajensen1@gmail.com
+ * @Date: 2023-07-15 20:43:00
+ * @LastEditors: Johannjensen johannajensen1@gmail.com
+ * @LastEditTime: 2023-07-17 10:12:33
+ * @FilePath: \BigData\BigData\src\views\right_bottom.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <script setup>
 import * as echarts from 'echarts';
 import { onMounted } from 'vue';
@@ -12,92 +20,41 @@ const rightbottom = () => {
     var option;
 
     option = {
-        title: {
-            text: 'Nightingale Chart',
-            subtext: 'Fake Data',
-            left: 'center'
+        // title: [
+        //     {
+        //         text: 'Tangential Polar Bar Label Position (middle)'
+        //     }
+        // ],
+        polar: {
+            radius: [30, '80%']
         },
-        tooltip: {
-            trigger: 'item',
-            formatter: '{a} <br/>{b} : {c} ({d}%)'
+        textStyle: {
+            color:'white'
         },
-        legend: {
-            left: 'center',
-            top: 'bottom',
-            data: [
-                'rose1',
-                'rose2',
-                'rose3',
-                'rose4',
-                'rose5',
-                'rose6',
-                'rose7',
-                'rose8'
-            ]
+        angleAxis: {
+            max: 4,
+            startAngle: 75
         },
-        toolbox: {
-            show: true,
-            feature: {
-                mark: { show: true },
-                dataView: { show: true, readOnly: false },
-                restore: { show: true },
-                saveAsImage: { show: true }
+        radiusAxis: {
+            type: 'category',
+            data: ['a', 'b', 'c', 'd']
+        },
+        tooltip: {},
+        series: {
+            type: 'bar',
+            data: [2, 1.2, 2.4, 3.6],
+            coordinateSystem: 'polar',
+            label: {
+                show: true,
+                position: 'middle',
+                formatter: '{b}: {c}'
             }
-        },
-        series: [
-            {
-                name: 'Radius Mode',
-                type: 'pie',
-                radius: [20, 140],
-                center: ['25%', '50%'],
-                roseType: 'radius',
-                itemStyle: {
-                    borderRadius: 5
-                },
-                label: {
-                    show: false
-                },
-                emphasis: {
-                    label: {
-                        show: true
-                    }
-                },
-                data: [
-                    { value: 40, name: 'rose 1' },
-                    { value: 33, name: 'rose 2' },
-                    { value: 28, name: 'rose 3' },
-                    { value: 22, name: 'rose 4' },
-                    { value: 20, name: 'rose 5' },
-                    { value: 15, name: 'rose 6' },
-                    { value: 12, name: 'rose 7' },
-                    { value: 10, name: 'rose 8' }
-                ]
-            },
-            {
-                name: 'Area Mode',
-                type: 'pie',
-                radius: [20, 140],
-                center: ['75%', '50%'],
-                roseType: 'area',
-                itemStyle: {
-                    borderRadius: 5
-                },
-                data: [
-                    { value: 30, name: 'rose 1' },
-                    { value: 28, name: 'rose 2' },
-                    { value: 26, name: 'rose 3' },
-                    { value: 24, name: 'rose 4' },
-                    { value: 22, name: 'rose 5' },
-                    { value: 20, name: 'rose 6' },
-                    { value: 18, name: 'rose 7' },
-                    { value: 16, name: 'rose 8' }
-                ]
-            }
-        ]
-    };
+        }
+    }
 
     option && myChart.setOption(option);
-}
+};
+
 </script>
 <template>
     <div class="rightbottom"></div>
@@ -115,5 +72,6 @@ const rightbottom = () => {
     border-radius: 30px;
     color: white;
     padding: 10px;
+    overflow: hidden;
 }
 </style>

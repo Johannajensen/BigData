@@ -2,7 +2,7 @@
  * @Author: Johannjensen johannajensen1@gmail.com
  * @Date: 2023-07-15 11:27:30
  * @LastEditors: Johannjensen johannajensen1@gmail.com
- * @LastEditTime: 2023-07-15 17:16:44
+ * @LastEditTime: 2023-07-17 09:38:58
  * @FilePath: \BigData\BigData\src\views\bottomchart.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -34,7 +34,36 @@ const bottomchart = () => {
             top: '15%'
         },
         legend: {
-            data: ['Line 1', 'Line 2', 'Line 3', 'Line 4', 'Line 5']
+            textStyle: 'white'
+        },
+        textStyle: {
+            color: 'white'
+        },
+        legend: {
+            data: [
+                // 'Line 1', 'Line 2', 'Line 3', 'Line 4', 'Line 5',
+                {
+                    name: 'Line 1',
+                    textStyle: { color: 'white' }
+                },
+                {
+                    name: 'Line 2',
+                    textStyle: { color: 'white' }
+                },
+                {
+                    name: 'Line 3',
+                    textStyle: { color: 'white' }
+                },
+                {
+                    name: 'Line 4',
+                    textStyle: { color: 'white' }
+                },
+                {
+                    name: 'Line 5',
+                    textStyle: { color: 'white' }
+                }
+            ],
+
         },
         toolbox: {
             feature: {

@@ -2,7 +2,7 @@
  * @Author: Johannjensen johannajensen1@gmail.com
  * @Date: 2023-07-15 10:59:45
  * @LastEditors: Johannjensen johannajensen1@gmail.com
- * @LastEditTime: 2023-07-15 17:15:58
+ * @LastEditTime: 2023-07-17 09:20:57
  * @FilePath: \BigData\BigData\src\views\topchart.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -68,7 +68,12 @@ const echarts_top = () => {
                 }
             }
         },
-        legend: {},
+        legend: {
+            textStyle:'white'
+        },
+        textStyle: {
+            color:'white'
+        },
         toolbox: {
             show: true,
             feature: {

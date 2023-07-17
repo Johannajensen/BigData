@@ -2,7 +2,7 @@
  * @Author: Johannjensen johannajensen1@gmail.com
  * @Date: 2023-07-15 10:22:23
  * @LastEditors: Johannjensen johannajensen1@gmail.com
- * @LastEditTime: 2023-07-15 20:50:05
+ * @LastEditTime: 2023-07-17 10:12:04
  * @FilePath: \BigData\BigData\src\components\index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AEigh
 -->
@@ -98,13 +98,12 @@ main {
 
 .middle {
     flex: 1;
-    background-color: rgba(87, 87, 175, 0.454);
 }
 
 .right {
     /* background-color: aquamarine; */
     height: 100%;
-    width: 480px;
+    width: 400px;
     display: flex;
     flex-direction: column;
 }
@@ -119,12 +118,14 @@ main {
     flex: 1;
     /* background-color: bisque; */
     margin: 18px 0;
+    overflow: hidden;
+    border-radius: 30px;
 }
 
 .right_bottom {
     height: 300px;
     width: 100%;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
 
 }
 </style>

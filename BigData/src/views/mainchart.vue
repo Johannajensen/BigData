@@ -2,7 +2,7 @@
  * @Author: Johannjensen johannajensen1@gmail.com
  * @Date: 2023-07-15 11:16:30
  * @LastEditors: Johannjensen johannajensen1@gmail.com
- * @LastEditTime: 2023-07-15 17:11:22
+ * @LastEditTime: 2023-07-17 09:34:16
  * @FilePath: \BigData\BigData\src\views\mainchart.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -41,6 +41,9 @@ const center_chart = () => {
             animationDurationUpdate: 300,
             max: 3 // only the largest 3 bars will be displayed
         },
+        textStyle: {
+            color: 'white'
+        },
         series: [
             {
                 realtimeSort: true,
@@ -56,7 +59,11 @@ const center_chart = () => {
             }
         ],
         legend: {
-            show: true
+            show: true,
+            data: [{
+                name: '基础数据展示',
+                textStyle: { color: 'white' }
+            }]
         },
         animationDuration: 0,
         animationDurationUpdate: 3000,
